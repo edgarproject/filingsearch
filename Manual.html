@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manual</title>
+<link rel="stylesheet" href="https://stackedit.io/res-min/themes/base.css" />
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body><div class="container"><h1 id="proyecto-edgar-manual">Proyecto Edgar - MANUAL</h1>
+
+<hr>
+
+<blockquote>
+  <p><i class="icon-cog"></i><strong>Instalación</strong></p>
+</blockquote>
+
+
+
+<h5 id="linux-windows"><i class="icon-hdd"></i> <strong>Linux</strong>  <i class="icon-hdd"></i> <strong>Windows</strong></h5>
+
+<p>Para estos dos sistemas operativos se deben tener instalados los siguentes  paquetes <i class="icon-folder-open"></i><strong>Paquetes requeridos para Scrapy</strong></p>
+
+<blockquote>
+  <p><i class="icon-folder-open"></i> <strong>Paquetes requeridos para Scrapy</strong></p>
+</blockquote>
+
+<p><i class="icon-cog"></i>Scrapy <a href="https://scrapy.org/">https://scrapy.org/</a></p>
+
+<table>
+<thead>
+<tr>
+  <th>Paquete</th>
+  <th>Versión</th>
+</tr>
+</thead>
+<tbody><tr>
+  <td>PyDispatcher</td>
+  <td>(&gt;=2.0.5)</td>
+</tr>
+<tr>
+  <td>Twisted</td>
+  <td>(&gt;=10.0.0)</td>
+</tr>
+<tr>
+  <td>cssselect</td>
+  <td>(&gt;=0.9)</td>
+</tr>
+<tr>
+  <td><strong>lxml</strong></td>
+  <td></td>
+</tr>
+<tr>
+  <td>parsel</td>
+  <td>(&gt;=0.9.3)</td>
+</tr>
+<tr>
+  <td>pyOpenSSL</td>
+  <td></td>
+</tr>
+<tr>
+  <td>queuelib</td>
+  <td></td>
+</tr>
+<tr>
+  <td>service-identity</td>
+  <td></td>
+</tr>
+<tr>
+  <td>six</td>
+  <td>(&gt;=1.5.2)</td>
+</tr>
+<tr>
+  <td>w3lib</td>
+  <td>(&gt;=1.14.2)</td>
+</tr>
+</tbody></table>
+
+
+<hr>
+
+<p><i class="icon-refresh"></i> Por lo general la mayoría de estos paquetes son descargados automáticamente, menos el <strong>lxml</strong> el cual siempre es el causante del error de instalación. </p>
+
+<blockquote>
+  <h4 id="instalación-en-windows"><i class="icon-cog"></i> <strong>Instalación en Windows</strong></h4>
+  
+  <p>Para mas información aquí esta la instalación Guiada de Scrapy <br>
+  <a href="http://doc.scrapy.org/en/latest/intro/install.html">http://doc.scrapy.org/en/latest/intro/install.html</a></p>
+</blockquote>
+
+<p>Primero procedemos a instalar python, una <strong>version</strong> &gt; 2.7  <br>
+ <i class="icon-cog"></i> Python <a href="https://www.python.org/downloads/">https://www.python.org/downloads/</a> <br>
+ Luego de la descarga e instalación, se procede a lo siguiente:</p>
+
+<blockquote>
+  <ul>
+  <li>Es necesario ajustar la variable de entorno <strong>PATH</strong> para incluir rutas de acceso a las secuencias de comandos ejecutables y adicionales Python. Las siguientes rutas deben añadirse al <strong>PATH</strong></li>
+  </ul>
+</blockquote>
+
+
+
+<pre class="prettyprint"><code class=" hljs tex">C:<span class="hljs-command">\Python</span>27<span class="hljs-command">\;</span>C:<span class="hljs-command">\Python</span>27<span class="hljs-command">\Scripts</span><span class="hljs-command">\;</span></code></pre>
+
+<p><strong>Ayuda</strong> <a href="http://lingwars.github.io/blog/instalar-python-en-windows-7.html">http://lingwars.github.io/blog/instalar-python-en-windows-7.html</a></p>
+
+<p><i class="icon-pencil"></i> Donde “Python27” se refiere a la        carpeta donde esta almacenado python, para ver la carpeta, diríjase a los archivos del disco C:/ y verifique que el nombre de la carpeta. </p>
+
+<blockquote>
+  <p>Ahora abre cualquier Terminal en Windows, ya cea la <strong>cmd</strong> ( <kbd>Win+R</kbd>)  o la que recomiendo <strong><em>Windows Power Shell</em></strong> y escribimos: python, te debera salir un espacio para ejecutar “&gt;&gt;&gt;” si no te sale ningun error es por que Python quedo bien instalado. </p>
+</blockquote>
+
+<hr>
+
+
+
+<h3 id="seguimos-con-la-instalación-de-pip">Seguimos con la instalación de Pip</h3>
+
+<p><i class="icon-cog"></i> <strong>Pip</strong> <a href="https://pip.pypa.io/en/stable/installing/">https://pip.pypa.io/en/stable/installing/</a> <br>
+Primero verificamos si <strong>Pip</strong> no se encuentra ya instalado, vamos a la <em>Terminal</em> que escogimos y escribimos <strong>pip</strong>, si nos sale que no se encuentra el comando es por que hace falta intarlarlo:</p>
+
+<blockquote>
+  <ul>
+  <li>Descargamos el archivo <strong>get-pip.py</strong> aqui  <a href="https://bootstrap.pypa.io/get-pip.py">https://bootstrap.pypa.io/get-pip.py</a>, luego ejecutamos en la terminal el comando: <br>
+  <em>python get-pip.py</em></li>
+  </ul>
+</blockquote>
+
+<p><i class="icon-trash"></i>  Mas informacion para versiones de Pip, <a href="https://pypi.python.org/pypi/pip">https://pypi.python.org/pypi/pip</a></p>
+
+<hr>
+
+
+
+<h4 id="ahora-procedemos-a-instalar-scrapy-y-los-paquetes-que-windows-no-instala">Ahora procedemos a instalar Scrapy y los paquetes que Windows no instala.</h4>
+
+<p><i class="icon-cog"></i> <strong>Scrapy</strong> <br>
+ Aqui se encuentran todas las verciones, si se desea instalar una version en particular: <a href="https://pypi.python.org/pypi/Scrapy">https://pypi.python.org/pypi/Scrapy</a></p>
+
+<p><i class="icon-upload"></i> <strong>Versión especifica</strong></p>
+
+<blockquote>
+  <p>Auque el progama se desarrollo sobre la version de scrapy 1.1.0 el no tendra problema en trabajar en versiones mas recientes, de todos modos aqui estan los pasos si se quiere instalar una version espesifica: </p>
+  
+  <ul>
+  <li>Vamos a la URL  de todas las versiones y seleccionamos la quedeseamos. </li>
+  <li>Descargamos el Archivo <strong>.whl</strong></li>
+  <li>Vamos a la terminal y nos dirigimos al directorio donde descargamos el archivo. </li>
+  <li>Ejecutamos el siguiente comando en la terminal:</li>
+  </ul>
+</blockquote>
+
+
+
+<pre class="prettyprint"><code class=" hljs cmake">pip <span class="hljs-keyword">install</span> archivo.whl</code></pre>
+
+<p><i class="icon-upload"></i> <strong>Ultima Version</strong> <br>
+Ejecutomos el siguiente comando en la terminal:</p>
+
+
+
+<pre class="prettyprint"><code class=" hljs cmake">pip <span class="hljs-keyword">install</span> Scrapy</code></pre>
+
+<p><i class="icon-refresh"></i> Lo mas probable es que te salga algun error a lo ultimo de color rojo, eso se debe a que <strong>scrapy</strong> en windows no logra descargar todo los paquetes. Para <strong>Solucionar</strong>  esto aremos lo siguiente: </p>
+
+
+
+<h5 id="verifiquemos-que-paquetes-se-instalaron-para-esto-ejecutamos-el-siguiente-comando-en-la-terminal">Verifiquemos que paquetes se instalaron, para esto ejecutamos el siguiente comando en la <strong>Terminal</strong>:</h5>
+
+
+
+<pre class="prettyprint"><code class=" hljs ">pip freeze</code></pre>
+
+<p>Comparamos que paquetes faltan tomando como muestra la tabla de  <br>
+<i class="icon-folder-open"></i> <strong>Paquetes requeridos para Scrapy</strong> y los que no esten procedmeos a instalarlos de la siguiente manera:</p>
+
+
+
+<pre class="prettyprint"><code class=" hljs cmake">pip <span class="hljs-keyword">install</span> <span class="hljs-string">"nombre del paquete"</span>
+ejemplo:
+pip <span class="hljs-keyword">install</span> PyDispatcher</code></pre>
+
+<p><em>Dado el caso que al ejecutar dicho comando salga un error, es por que hay que intalrlo manualmente de la siguiente manera:</em> <strong>Por lo general nunca pasa</strong></p>
+
+<blockquote>
+  <p>Cuando instalamos la version de scrapy, en cada version aparece esto <strong>Requires Distributions</strong>  para Scrapy 1.1.0: <a href="https://pypi.python.org/pypi/Scrapy/1.1.0">https://pypi.python.org/pypi/Scrapy/1.1.0</a></p>
+  
+  <ul>
+  <li>Cada paquete requerido es un enlace, vamos a ese enlace del paquete y descargamos el archivo <strong>.zip</strong></li>
+  <li>Descomprimimos el archivo</li>
+  <li>Abrimos la terminal y nos dirigimos al directorio donde se descomprimio el paquete.</li>
+  <li>Ejecutamos en la terminal el comando:</li>
+  </ul>
+</blockquote>
+
+
+
+<pre class="prettyprint"><code class=" hljs avrasm">   python setup<span class="hljs-preprocessor">.py</span></code></pre>
+
+<p><strong>Por ultimo instalamos el paquete LXML</strong></p>
+
+<p><i class="icon-cog"></i> <strong>lxml</strong> <br>
+Versiones: <a href="https://pypi.python.org/pypi/lxml">https://pypi.python.org/pypi/lxml</a> <br>
+Para la version de Scrapy 1.1.0 recomiendo la version de lxml <strong>3.4.4</strong></p>
+
+<blockquote>
+  <p><strong>Instalacion</strong></p>
+  
+  <ul>
+  <li>Vamos a la version de lxml que queremos descarcarg, en este caso : <a href="https://pypi.python.org/pypi/lxml/3.4.4">https://pypi.python.org/pypi/lxml/3.4.4</a></li>
+  <li>Descargamos el archivo Ejemplo (lxml-3.4.4.win-amd64-py3.2.exe (md5) ) donde <strong>win-amd64</strong> para pc de 64 bits o <strong>win32</strong> para pc de 32 bits. y <strong>-py32</strong> se refiere a la version de python. </li>
+  <li>En este caso para uno de 64 bits y con python 2.7.12, intalare este: <strong>lxml-3.4.4.win-amd64-py2.7.exe (md5) </strong></li>
+  <li>Ejecutamos el <strong>.exe</strong> luego dla descarga.</li>
+  </ul>
+</blockquote>
+
+<p>Luego Instalamos</p>
+
+<p><i class="icon-cog"></i> <strong>pywin32</strong> <br>
+<a href="https://sourceforge.net/projects/pywin32/files/pywin32/Build%20215/">https://sourceforge.net/projects/pywin32/files/pywin32/Build%20215/</a></p>
+
+<blockquote>
+  <p>En este caso instalareos <strong>pywin32-215.win32-py2.7.exe</strong> dado que es para una version de python de 2.7 en adelante.</p>
+  
+  <ul>
+  <li>Descargamos y ejecutamos el <strong>.exe</strong></li>
+  </ul>
+</blockquote>
+
+<hr>
+
+<p>Para Finalizar ejecutamos de nuevo el comando: </p>
+
+
+
+<pre class="prettyprint"><code class=" hljs cmake">pip <span class="hljs-keyword">install</span> Scrapy</code></pre>
+
+<p>Ahora si debio instalar sin ningu problema, para verificar, dirijase a la Terminal y ejecute el comando:</p>
+
+
+
+<pre class="prettyprint"><code class=" hljs ">scrapy</code></pre>
+
+<p>Le debio salir una lista de opciones. </p>
+
+<hr>
+
+<blockquote>
+  <h4 id="instalación-en-linux"><i class="icon-cog"></i> <strong>Instalación en Linux</strong></h4>
+  
+  <p>Para mas información aquí esta la instalación Guiada de Scrapy <br>
+  <a href="http://doc.scrapy.org/en/latest/intro/install.html">http://doc.scrapy.org/en/latest/intro/install.html</a></p>
+</blockquote>
+
+<p>La instalación en <strong>linux</strong> es mucho mas sencilla, primero procedemos a instalar <strong>python</strong>, ejecutamos los siguientes comandos en la  <i class="icon-cog"></i>terminal de ubuntu. </p>
+
+
+
+<pre class="prettyprint"><code class=" hljs lasso">sudo add<span class="hljs-attribute">-apt</span><span class="hljs-attribute">-repository</span> ppa:fkrull/deadsnakes
+sudo apt<span class="hljs-attribute">-get</span> update
+sudo apt<span class="hljs-attribute">-get</span> install python2<span class="hljs-number">.7</span></code></pre>
+
+<p>Donde <kbd>python3.5</kbd> dice la version de python que instalaremos, asi podemos instalar cualquier version ejemplo:  <kbd>sudo apt-get install python2.7.12</kbd></p>
+
+<hr>
+
+<p><i class="icon-pencil"></i> <strong>Nota</strong>: <br>
+Si de esta manera no funciona, puedes realizar los pasos que se encuentran aquí: <a href="http://tecadmin.net/install-python-2-7-on-ubuntu-and-linuxmint/#">http://tecadmin.net/install-python-2-7-on-ubuntu-and-linuxmint/#</a></p>
+
+
+
+<h5 id="procedemos-a-instalar-pip">Procedemos a instalar Pip</h5>
+
+<p><i class="icon-cog"></i> <strong>Pip</strong> </p>
+
+
+
+<pre class="prettyprint"><code class=" hljs lasso">sudo apt<span class="hljs-attribute">-get</span> install python<span class="hljs-attribute">-pip</span> python<span class="hljs-attribute">-dev</span> build<span class="hljs-attribute">-essential</span> 
+sudo pip install <span class="hljs-subst">--</span>upgrade pip 
+sudo pip install <span class="hljs-subst">--</span>upgrade virtualenv</code></pre>
+
+<p><i class="icon-pencil"></i> <strong>Nota</strong>: <br>
+Tambien se puede instalar de la misma forma que mostramos en la instalacion de <strong>Windows</strong></p>
+
+<hr>
+
+<p>Por ultimo procedemos a instalar <em>Scrapy</em> <br>
+ <i class="icon-cog"></i> <strong>Scrapy</strong> <br>
+ Aqui se encuentran todas las verciones, si se desea instalar una version en particular: <a href="https://pypi.python.org/pypi/Scrapy">https://pypi.python.org/pypi/Scrapy</a></p>
+
+<p>Ejecutamos el siguiente comando en la <strong>Terminal</strong></p>
+
+
+
+<pre class="prettyprint"><code class=" hljs cmake">pip <span class="hljs-keyword">install</span> scrapy</code></pre>
+
+<p>Debe instalar correctamente, si sucede algun error,  es que faltaron paquetes por instalar, se soluciona de la misma manera que se hizo en Windows.</p>
+
+
+
+<pre class="prettyprint"><code class=" hljs cmake">pip <span class="hljs-keyword">install</span> <span class="hljs-string">"nombre del paquete"</span></code></pre>
+
+<p><i class="icon-refresh"></i>  Dado el caso que el paquete no se deje instalar de la anterior forma como sucede muchos casos con el <strong>lxml</strong>, procedemos a lo siguiente:</p>
+
+<blockquote>
+  <p><strong>Instalacion</strong></p>
+  
+  <ul>
+  <li>Vamos a la version de lxml que queremos descarcarg, en este caso : <a href="https://pypi.python.org/pypi/lxml/3.4.4">https://pypi.python.org/pypi/lxml/3.4.4</a></li>
+  <li>Descargamos el archivo Ejemplo (xml-3.4.4-cp27-none-win_amd64.whl (md5) ) donde <strong>win-amd64</strong> para pc de 64 bits o <strong>win32</strong> para pc de 32 bits. y <strong>-py32</strong> se refiere a la version de python. </li>
+  <li>En este caso para uno de 64 bits y con python 2.7.12, intalare este: <strong>xml-3.4.4-cp27-none-win_amd64.whl (md5) </strong></li>
+  <li>Nos dirigimos al directorio donde se descargo y ejecutamos.</li>
+  </ul>
+</blockquote>
+
+
+
+<pre class="prettyprint"><code class=" hljs lasso">pip install <span class="hljs-built_in">xml</span><span class="hljs-subst">-</span><span class="hljs-number">3.4</span><span class="hljs-number">.4</span><span class="hljs-attribute">-cp27</span><span class="hljs-attribute">-none</span><span class="hljs-attribute">-win_amd64</span><span class="hljs-built_in">.</span>whl (md5)</code></pre>
+
+<hr>
+
+<p>Para Finalizar ejecutamos de nuevo el comando: </p>
+
+
+
+<pre class="prettyprint"><code class=" hljs cmake">pip <span class="hljs-keyword">install</span> Scrapy</code></pre>
+
+<p>Ahora si debió instalar sin ningún problema, para verificar, diríjase a la Terminal y ejecute el comando:</p>
+
+
+
+<pre class="prettyprint"><code class=" hljs ">scrapy</code></pre>
+
+<p>Le debio salir una lista de opciones. </p>
+
+<hr>
+
+
+
+<h3 id="descarga-del-proyecto"><i class="icon-folder-open"></i> <strong>Descarga del proyecto</strong></h3>
+
+<p>Por seguridad de manejo de versiones y continua mejora del código, todo el paquete del proyecto se encuentra almacenado aquí:</p>
+
+
+
+<pre class="prettyprint"><code class=" hljs avrasm"><span class="hljs-label">https:</span>//bitbucket<span class="hljs-preprocessor">.org</span>/</code></pre>
+
+<p>Luego de que hayas ingresado en el <strong>login</strong> y seleccionado <strong>projectedgar</strong>, a mano izquieda se mostraran varias opciones:</p>
+
+<blockquote>
+  <ul>
+  <li><strong>Clone</strong> <br>
+  Usando git, pegas el <strong>link</strong> que te sale en esta opción y la pegas en <strong>la terminal</strong> en el directorio en el que lo quieres descargar. </li>
+  <li><strong>Downloads</strong> <br>
+  De esta forma puede descargar cada vez que se haga una actualización el archivo en <strong>.zip</strong></li>
+  </ul>
+</blockquote>
+
+<p><i class="icon-pencil"></i> <strong>Nota</strong>: <br>
+Si selecciono la  opcion de <strong>Clone</strong> aqui esta lo que debes instalar antes de pegar el link en la terminal. </p>
+
+
+
+<pre class="prettyprint"><code class=" hljs bash"><span class="hljs-built_in">sudo</span> apt-get update
+<span class="hljs-built_in">sudo</span> apt-get install git</code></pre>
+
+<hr>
+
+
+
+<h4 id="esquema-del-projecto"><i class="icon-folder-open"></i> <strong>Esquema del projecto</strong></h4>
+
+<blockquote>
+  <p><i class="icon-folder-open"></i> projectedgar <br>
+  ……<i class="icon-folder-open"></i> getedgar <br>
+  …………<i class="icon-folder-open"></i>getedgar <br>
+  ………………..<i class="icon-folder-open"></i>spiders <br>
+  ……………………….<i class="icon-file"></i>CONFIG.txt <br>
+  ……………………….<i class="icon-file"></i>SICs.txt <br>
+  ……………………….<i class="icon-file"></i>ALLSICs.txt <br>
+  ……………………….<i class="icon-file"></i>__init__py <br>
+  ……………………….<i class="icon-file"></i>URLs.txt <br>
+  ……………………….<i class="icon-file"></i><strong>search.py</strong> <br>
+  ……………………….<i class="icon-file"></i>Read.py <br>
+  ………………..<i class="icon-file"></i>__init__py <br>
+  ………………..<i class="icon-file"></i>items.py <br>
+  ………………..<i class="icon-file"></i>pipelines.py <br>
+  ………………..<i class="icon-file"></i>settings.py <br>
+  …………<i class="icon-file"></i>scrapy.cfg <br>
+  …………<i class="icon-file"></i>readme.txt</p>
+</blockquote>
+
+
+
+<h4 id="descarga"><strong>DESCARGA</strong></h4>
+
+<p>Se debe descargar del siguiente repositorio privado <a href="https://bitbucket.org">https://bitbucket.org</a></p>
+
+
+
+<h4 id="descripciones"><strong>DESCRIPCIONES</strong></h4>
+
+<blockquote>
+  <p><i class="icon-file"></i>CONFIG.txt <br>
+  Archivo en el que se configuran los parámetros de búsqueda </p>
+</blockquote>
+
+
+
+<pre class="prettyprint"><code class=" hljs asciidoc">KEYDOCS:10-k 10-Q 8-k S-8 20-F F-10 F-8 6-k
+PROFUNDIDAD DE BUSQUEDA:300
+SI DESEA BUSCAR EMPRESAS EN PARTICULAR PON 1, SI ES POR SICS PON 0:[1]
+<span class="hljs-header">KEYWORDS:4
+----------------</span>
+joint venture
+jv agreement
+joint venture master agreement
+<span class="hljs-header">strategic alliance agreement
+---------------</span>
+<span class="hljs-header">KEYWORS_FALSE:2
+---------------</span>
+new release
+<span class="hljs-header">press release
+--------------</span></code></pre>
+
+<p><i class="icon-file"></i>SICs.txt</p>
+
+<blockquote>
+  <p>Archivo en el que se insertan la cantidad de SICs que quiero buscar. Para esto en el archivo <i class="icon-file"></i>CONFIG.txt se debe poner en la tercera linea el numero 0 -&gt; [0]</p>
+</blockquote>
+
+<p><i class="icon-file"></i>ALLSICs.txt</p>
+
+<blockquote>
+  <p>Archivo en el que se encuentran todos los SIC para que se seleccionen la cantida que se quera buscar y insertarlos en el documento <i class="icon-file"></i>SICs.txt</p>
+</blockquote>
+
+<p><i class="icon-file"></i>URLs.txt</p>
+
+<blockquote>
+  <p>Si se desea buscar por una <strong>empresa en particular</strong>, se insertan en el documento las urls de estas y en el archivo   <i class="icon-file"></i>CONFIG.txt en la linea 3, se inserta el numero 1 -&gt; [1].</p>
+  
+  <p>EJEMPLO: Se va a la url de la empresa, aquí seleccionamos donde dice <em>“Limit Results Per Page”</em>  seleccionamos la opcion de 100, luego copiamos la url y la pegamos en el documento.</p>
+</blockquote>
+
+
+
+<pre class="prettyprint"><code class=" hljs avrasm"><span class="hljs-label">https:</span>//www<span class="hljs-preprocessor">.sec</span><span class="hljs-preprocessor">.gov</span>/cgi-bin/browse-edgar?action=getcompany&amp;CIK=<span class="hljs-number">0000012927</span>&amp;type=&amp;dateb=&amp;owner=exclude&amp;count=<span class="hljs-number">100</span></code></pre>
+
+<p><i class="icon-file"></i>Read.py</p>
+
+<blockquote>
+  <p>Clase encargada de leer todas las configuraciones del archivo <i class="icon-file"></i>CONFIG.txt para que sean usadas en el filtro de los documentos. </p>
+</blockquote>
+
+
+
+<h4 id="searchpy"><i class="icon-file"></i><strong>search.py</strong></h4>
+
+<blockquote>
+  <p>Archivo de código principal, encargado de hacer las peticiones al servidor de <strong>sec.gov</strong> y filtrar la información. </p>
+</blockquote>
+
+
+
+<h3 id="ejecutar"><i class="icon-cog"></i> <strong>EJECUTAR</strong></h3>
+
+<blockquote>
+  <p>Se tiene varias formas de ejecutar,  la recomienda es la siguiente:  <br>
+  1] Abrir una terminal (Linux) o la consola Windows PowerShell (Windows) y dirigirce al la carpeta principal <i class="icon-folder-open"></i><strong>spiders</strong> por medio del comando <strong>cd</strong>.</p>
+</blockquote>
+
+
+
+<pre class="prettyprint"><code class=" hljs bash"><span class="hljs-built_in">cd</span> projecedgar/getedgar/getedgar/spiders</code></pre>
+
+
+
+<pre class="prettyprint"><code class=" hljs ">scrapy crawl search</code></pre>
+
+
+
+<h3 id="salida"><i class="icon-cog"></i> <strong>SALIDA</strong></h3>
+
+<blockquote>
+  <p><strong><em>EXCEL:</em></strong>  <br>
+  En la salida se generara un archivo <i class="icon-file"></i><strong>SalidaFinal.cvs</strong> el cual es un archivo separado por comas por ende puede ser abierto por cualquier editor de Texto (Recomiendo Sublime Text) o por <strong>EXCEL</strong>. <br>
+  <strong><em>JSON</em></strong>:  <br>
+  Si se desea almacenar en una base de datos o trabajar de manera mas sencilla esta información, también se tiene la opción de crear un archivo <strong>.json</strong> <br>
+  Para genera el archivo de salida .json, se debe realizar lo siguiente: <br>
+  <strong><em>PDF:</em></strong> <br>
+  Tambien se puede descargar el documento directamente en un formato .pdf, en este caso se debe de habilitar la linea: </p>
+</blockquote>
+
+
+
+<pre class="prettyprint"><code class=" hljs avrasm">scrapy crawl quotes -o NombreArchivo<span class="hljs-preprocessor">.json</span></code></pre>
+
+<hr>
+
+<p><strong><em>JUAN DANIEL ARBOLEDA</em></strong> <br>
+<strong><em>jarbol16@gmail.com</em></strong> <br>
+<strong><em>Para: Andres Velez Calle </em></strong></p></div></body>
+</html>

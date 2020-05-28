@@ -1,0 +1,59 @@
+{
+  "sics": [
+    100,200,700,800,900,1000,1040,1090,1220,1221,1311,1381,1382,1389,1400,1520,1531,1540
+    ,1600,1623,1700,1731,2000,2011,2013,2015,2020,2024,2030,2033,2040,2050,2052,2060,2070,2080
+    ,2082,2086,2090,2092
+  ],
+  "search_depth_in_file": 50,
+  "key_docs": [
+    "10-k","10-Q","8-k","S-8","20-F","F-10","F-8","6-k","S-1/A",
+    "S-8/A","10KSB","10-12B","10-12B/A","10-12G","10-D","10-D/A",
+    "10-Q/A","10KSB40","10SB12B","10SB12G/A","11-K/A","18-K","18-K/A",
+    "10-KT","1-A","1-A/A","1-A POS","1-A-W","1-A-W/A","1-E","20F/A",
+    "20FR12B","20FR12B/A","20FR12G","20FR12G/A","3","4","40-17G",
+    "40-17G/A","40-F","40-F/A","40-APP","40FR12B","40FR12B/A","40FR12G",
+    "40FR12G/A","424B1","424B2","424B3","424B4","424B5","424B7","424B8","425",
+    "485APOS","485BPOS","497","6-K/A","8-K/A","CB","CB/A","DFAN14A","D", "DOS",
+    "DOS/A","DRS","DRS/A","F-1","F-1/A","F-10/A","F-3","F-3/A","F-3ASR","F-4",
+    "F-4/A","F-6","F-6/A","F-7","F-7/A","F-8","F-8/A","F-80","F-80/A","N-14",
+    "N-14/A","N-14 8C","N-14 8C/A","N-4","S-11","S-11/A","S-3","S-3/A",
+    "S-3ASR","S-B","SB-2","S-4","SB-2/A","S-B/A","SC 13D","SC 13D/A",
+    "10QSB","10-12G/A"
+  ],
+  "keywords": [
+    "joint venture master agreement",
+    "joint venture agreement",
+    "joint venture contract",
+    "joint venture framework agreement",
+    "joint venture formation agreement",
+    "joint venture operation agreement",
+    "jv agreement",
+    "jv contract",
+    "master agreement",
+    "joint-venture",
+    "jv-contract",
+    "jv-agreement"
+  ],
+  "keywords_false": [
+    "news release",
+    "complete submission text file",
+    "press release"
+  ],
+  "url_base_by_CIK": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK={ AQUI VA El CIK DE LA EMPRESA   }&type=&dateb=&owner=include&start=0&count=100",
+  "company_specifies":{
+    "active": false,
+    "__read": "Aqui puedes optener los CIK de las empresas que deseas https://www.sec.gov/edgar/searchedgar/cik.htm",
+    "companies_CIKs":[
+      "0000788206","other"
+    ]
+  },
+  "response_pdf": {
+    "__read": "Si se desea que se imprima en pdf el documento que cumplio con los filtros",
+    "active": true
+  },
+  "file_out": {
+    "name": "SalidaPruebaHoy"
+  }
+
+
+}

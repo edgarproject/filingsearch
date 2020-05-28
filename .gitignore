@@ -1,0 +1,6 @@
+.idea/
+idea/*.xml
+*.pyc
+spiders/*.pyc
+spiders/datos.json
+getedgar/.idea/
