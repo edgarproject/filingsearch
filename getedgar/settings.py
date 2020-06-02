@@ -13,6 +13,6 @@ BOT_NAME = 'getedgar'
 SPIDER_MODULES = ['getedgar.spiders']
 NEWSPIDER_MODULE = 'getedgar.spiders'
 ITEM_PIPELINES = {'getedgar.pipelines.GetedgarPipeline':1}
-CONCURRENT_REQUESTS = 30 #Ajilisar la busqueda
+CONCURRENT_REQUESTS = 30 #Speeds the search
 #ROBOTSTXT_OBEY = True
 
