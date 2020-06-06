@@ -39,20 +39,20 @@
     "complete submission text file",
     "press release"
   ],
-  "url_base_by_CIK": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK={ AQUI VA El CIK DE LA EMPRESA   }&type=&dateb=&owner=include&start=0&count=100",
+  "url_base_by_CIK": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK={ ENTER COMPANY CIK HERE }&type=&dateb=&owner=include&start=0&count=100",
   "company_specifies":{
     "active": false,
-    "__read": "Aqui puedes optener los CIK de las empresas que deseas https://www.sec.gov/edgar/searchedgar/cik.htm",
+    "__read": "Here you can obtain the CIKS of the companies you are interested in https://www.sec.gov/edgar/searchedgar/cik.htm",
     "companies_CIKs":[
       "0000788206","other"
     ]
   },
   "response_pdf": {
-    "__read": "Si se desea que se imprima en pdf el documento que cumplio con los filtros",
+    "__read": "If you want to print the contract in pdf",
     "active": true
   },
   "file_out": {
-    "name": "SalidaPruebaHoy"
+    "name": "output"
   }
 
 
