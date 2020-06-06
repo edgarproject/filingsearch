@@ -145,98 +145,84 @@ Execute the following command in the termninal:</p>
 
 <pre class="prettyprint"><code class=" hljs cmake">pip <span class="hljs-keyword">install</span> Scrapy</code></pre>
 
-<p><i class="icon-refresh"></i> Lo mas probable es que te salga algun error a lo ultimo de color rojo, eso se debe a que <strong>scrapy</strong> en windows no logra descargar todo los paquetes. Para <strong>Solucionar</strong>  esto aremos lo siguiente: </p>
+<p><i class="icon-refresh"></i> In case there is an error message in red, it is because <strong>scrapy</strong> in windows sometimes does not download all packages. In such case do the following: </p>
 
 
 
-<h5 id="verifiquemos-que-paquetes-se-instalaron-para-esto-ejecutamos-el-siguiente-comando-en-la-terminal">Verifiquemos que paquetes se instalaron, para esto ejecutamos el siguiente comando en la <strong>Terminal</strong>:</h5>
+<h5 id="verify-if-packages-were-installed-by-entering-the-following-command-in-the-terminal">Verify if packages were installed by entering the following command in the <strong>Terminal</strong>:</h5>
 
 
 
 <pre class="prettyprint"><code class=" hljs ">pip freeze</code></pre>
 
-<p>Comparamos que paquetes faltan tomando como muestra la tabla de  <br>
-<i class="icon-folder-open"></i> <strong>Paquetes requeridos para Scrapy</strong> y los que no esten procedmeos a instalarlos de la siguiente manera:</p>
+<p>Compare with the table <br>
+<i class="icon-folder-open"></i> <strong>Packages required for Scrapy</strong> to find any missing package and proceeed to install them manually as follows:</p>
 
 
 
-<pre class="prettyprint"><code class=" hljs cmake">pip <span class="hljs-keyword">install</span> <span class="hljs-string">"nombre del paquete"</span>
-ejemplo:
+<pre class="prettyprint"><code class=" hljs cmake">pip <span class="hljs-keyword">install</span> <span class="hljs-string">"name of the package"</span>
+example:
 pip <span class="hljs-keyword">install</span> PyDispatcher</code></pre>
-
-<p><em>Dado el caso que al ejecutar dicho comando salga un error, es por que hay que intalrlo manualmente de la siguiente manera:</em> <strong>Por lo general nunca pasa</strong></p>
-
-<blockquote>
-  <p>Cuando instalamos la version de scrapy, en cada version aparece esto <strong>Requires Distributions</strong>  para Scrapy 1.1.0: <a href="https://pypi.python.org/pypi/Scrapy/1.1.0">https://pypi.python.org/pypi/Scrapy/1.1.0</a></p>
-  
-  <ul>
-  <li>Cada paquete requerido es un enlace, vamos a ese enlace del paquete y descargamos el archivo <strong>.zip</strong></li>
-  <li>Descomprimimos el archivo</li>
-  <li>Abrimos la terminal y nos dirigimos al directorio donde se descomprimio el paquete.</li>
-  <li>Ejecutamos en la terminal el comando:</li>
-  </ul>
-</blockquote>
-
 
 
 <pre class="prettyprint"><code class=" hljs avrasm">   python setup<span class="hljs-preprocessor">.py</span></code></pre>
 
-<p><strong>Por ultimo instalamos el paquete LXML</strong></p>
+<p><strong> Finalstep:LXML package installation</strong></p>
 
 <p><i class="icon-cog"></i> <strong>lxml</strong> <br>
-Versiones: <a href="https://pypi.python.org/pypi/lxml">https://pypi.python.org/pypi/lxml</a> <br>
-Para la version de Scrapy 1.1.0 recomiendo la version de lxml <strong>3.4.4</strong></p>
+Versions: <a href="https://pypi.python.org/pypi/lxml">https://pypi.python.org/pypi/lxml</a> <br>
+We recommend version <strong>3.4.4</strong></p>
 
 <blockquote>
-  <p><strong>Instalacion</strong></p>
+  <p><strong>Installation</strong></p>
   
   <ul>
-  <li>Vamos a la version de lxml que queremos descarcarg, en este caso : <a href="https://pypi.python.org/pypi/lxml/3.4.4">https://pypi.python.org/pypi/lxml/3.4.4</a></li>
-  <li>Descargamos el archivo Ejemplo (lxml-3.4.4.win-amd64-py3.2.exe (md5) ) donde <strong>win-amd64</strong> para pc de 64 bits o <strong>win32</strong> para pc de 32 bits. y <strong>-py32</strong> se refiere a la version de python. </li>
-  <li>En este caso para uno de 64 bits y con python 2.7.12, intalare este: <strong>lxml-3.4.4.win-amd64-py2.7.exe (md5) </strong></li>
-  <li>Ejecutamos el <strong>.exe</strong> luego dla descarga.</li>
+  <li>Go to the version of lxml to download, in this case: <a href="https://pypi.python.org/pypi/lxml/3.4.4">https://pypi.python.org/pypi/lxml/3.4.4</a></li>
+  <li>Download the file. For example:(lxml-3.4.4.win-amd64-py3.2.exe (md5) ) where <strong>win-amd64</strong> is for windows 64 bits o <strong>win32</strong> for 32 bits, and <strong>-py32</strong> refers to the version of python. </li>
+  <li>In this case for windows 64 bits and python 2.7.12, the file would be: <strong>lxml-3.4.4.win-amd64-py2.7.exe (md5) </strong></li>
+  <li>Execute the <strong>.exe</strong> then it downloads.</li>
   </ul>
 </blockquote>
 
-<p>Luego Instalamos</p>
+<p>Then we install</p>
 
 <p><i class="icon-cog"></i> <strong>pywin32</strong> <br>
 <a href="https://sourceforge.net/projects/pywin32/files/pywin32/Build%20215/">https://sourceforge.net/projects/pywin32/files/pywin32/Build%20215/</a></p>
 
 <blockquote>
-  <p>En este caso instalareos <strong>pywin32-215.win32-py2.7.exe</strong> dado que es para una version de python de 2.7 en adelante.</p>
+  <p>In this case we install <strong>pywin32-215.win32-py2.7.exe</strong> since this is for python versions over 2.7.</p>
   
   <ul>
-  <li>Descargamos y ejecutamos el <strong>.exe</strong></li>
+  <li>Download and execute the <strong>.exe</strong></li>
   </ul>
 </blockquote>
 
 <hr>
 
-<p>Para Finalizar ejecutamos de nuevo el comando: </p>
+<p>to finish, execute once again the following command: </p>
 
 
 
 <pre class="prettyprint"><code class=" hljs cmake">pip <span class="hljs-keyword">install</span> Scrapy</code></pre>
 
-<p>Ahora si debio instalar sin ningu problema, para verificar, dirijase a la Terminal y ejecute el comando:</p>
+<p>To verify the installation, go to the terminal and execute the following command:</p>
 
 
 
 <pre class="prettyprint"><code class=" hljs ">scrapy</code></pre>
 
-<p>Le debio salir una lista de opciones. </p>
+<p>A list of options should appear. </p>
 
 <hr>
 
 <blockquote>
-  <h4 id="instalación-en-linux"><i class="icon-cog"></i> <strong>Instalación en Linux</strong></h4>
+  <h4 id="instalación-en-linux"><i class="icon-cog"></i> <strong>Instalation en Linux</strong></h4>
   
-  <p>Para mas información aquí esta la instalación Guiada de Scrapy <br>
+  <p>For more information refer to: <br>
   <a href="http://doc.scrapy.org/en/latest/intro/install.html">http://doc.scrapy.org/en/latest/intro/install.html</a></p>
 </blockquote>
 
-<p>La instalación en <strong>linux</strong> es mucho mas sencilla, primero procedemos a instalar <strong>python</strong>, ejecutamos los siguientes comandos en la  <i class="icon-cog"></i>terminal de ubuntu. </p>
+<p>Installation in <strong>linux</strong> is simplet, first install <strong>python</strong>. Execute the following commands in the <i class="icon-cog"></i>ubuntu terminal. </p>
 
 
 
@@ -244,16 +230,16 @@ Para la version de Scrapy 1.1.0 recomiendo la version de lxml <strong>3.4.4</str
 sudo apt<span class="hljs-attribute">-get</span> update
 sudo apt<span class="hljs-attribute">-get</span> install python2<span class="hljs-number">.7</span></code></pre>
 
-<p>Donde <kbd>python3.5</kbd> dice la version de python que instalaremos, asi podemos instalar cualquier version ejemplo:  <kbd>sudo apt-get install python2.7.12</kbd></p>
+<p>Where <kbd>python3.5</kbd> indicates the python version, therefore that way any version can be installed, for example:  <kbd>sudo apt-get install python2.7.12</kbd></p>
 
 <hr>
 
 <p><i class="icon-pencil"></i> <strong>Nota</strong>: <br>
-Si de esta manera no funciona, puedes realizar los pasos que se encuentran aquí: <a href="http://tecadmin.net/install-python-2-7-on-ubuntu-and-linuxmint/#">http://tecadmin.net/install-python-2-7-on-ubuntu-and-linuxmint/#</a></p>
+In case that does not work, follow these steps: <a href="http://tecadmin.net/install-python-2-7-on-ubuntu-and-linuxmint/#">http://tecadmin.net/install-python-2-7-on-ubuntu-and-linuxmint/#</a></p>
 
 
 
-<h5 id="procedemos-a-instalar-pip">Procedemos a instalar Pip</h5>
+<h5 id="pip-installation">Pip Installation</h5>
 
 <p><i class="icon-cog"></i> <strong>Pip</strong> </p>
 
@@ -264,11 +250,11 @@ sudo pip install <span class="hljs-subst">--</span>upgrade pip
 sudo pip install <span class="hljs-subst">--</span>upgrade virtualenv</code></pre>
 
 <p><i class="icon-pencil"></i> <strong>Nota</strong>: <br>
-Tambien se puede instalar de la misma forma que mostramos en la instalacion de <strong>Windows</strong></p>
+It can also be installed the same way as windows <strong>Windows</strong></p>
 
 <hr>
 
-<p>Por ultimo procedemos a instalar <em>Scrapy</em> <br>
+<p>Finally we proceed to install <em>Scrapy</em> <br>
  <i class="icon-cog"></i> <strong>Scrapy</strong> <br>
  Aqui se encuentran todas las verciones, si se desea instalar una version en particular: <a href="https://pypi.python.org/pypi/Scrapy">https://pypi.python.org/pypi/Scrapy</a></p>
 
