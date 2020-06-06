@@ -19,10 +19,10 @@ class GetEdgarSpider(CrawlSpider):
     numero = 0
     #def __int__(self,sic=None, *args, **kwargs):
         #super(GetEdgarSpider, self).__init__(*args, **kwargs)
-    print_log("INICIANDO PROYECTO EDGAR")
+    print_log("INITIATING PROJECT GETEDGAR")
     fileJson = ReadJson()
     SICs = fileJson.get_json_key("sics")
-    print_log("SE LEE LOS SICS CONFIGURADOS")
+    print_log("READS THE SELECTED SICS")
     urls = []
     if fileJson.get_json_key("company_specifies")["active"] is False:
         for sic in SICs:
@@ -64,11 +64,11 @@ class GetEdgarSpider(CrawlSpider):
                         request.meta['item'] = item
                         request.meta['i'] = j
                         yield request
-                    #Recargo la nueva pagina con mas companias
+                    #Loads a new page with new companies
                     try:
                         next_companys = selector.xpath('//input[@value="Next 100"]/@onclick').extract()
                         if next_companys:
-                            new_url = 'https://www.sec.gov'+str(next_companys[0])[17:-1] #Obtengo la nueva direccion url
+                            new_url = 'https://www.sec.gov'+str(next_companys[0])[17:-1] #Obtains the new url
                             new_request = scrapy.Request(new_url,callback=self.parse)
                             yield new_request
                         else:
@@ -121,7 +121,7 @@ class GetEdgarSpider(CrawlSpider):
                     yield request
             else:
                 print_log("-----------------Sin datos---------------------------------")
-            new_url = 'https://www.sec.gov'+str(next_companys[0])[17:-1] #Obtengo la nueva direccion url
+            new_url = 'https://www.sec.gov'+str(next_companys[0])[17:-1] #obtains the new url
             new_request = scrapy.Request(new_url,callback=self.parseGetFillings)
             new_request.meta['item'] = item
             yield new_request
@@ -192,7 +192,7 @@ class GetEdgarSpider(CrawlSpider):
                     create_pdf(response.url, date[2][:-4])
                 return True
     #======================================================================
-    #   Metodo para buscar las palabras Claves en los titulos de las tablas
+    #   Method for searching the keywords in the titles of the tables
     #======================================================================
 
     def searchWords(self, line):
